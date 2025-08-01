@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card animated-card">
+    <h2>📄 Attendance Records</h2>
+    <table>
+        <tr><th>Student</th><th>Date</th><th>Status</th></tr>
+        {% for row in records %}
+        <tr>
+            <td>{{ row[0] }}</td>
+            <td>{{ row[1] }}</td>
+            <td>{{ row[2] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+{% endblock %}
